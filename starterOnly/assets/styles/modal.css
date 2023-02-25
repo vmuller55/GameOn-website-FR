@@ -10,6 +10,7 @@
 }
 
 /* Landing Page */
+
 body {
   margin: 0;
   display: flex;
@@ -29,6 +30,7 @@ img {
 
 
 /* Nav-Bar */
+
 .topnav {
   overflow: hidden;
   display: flex;
@@ -73,6 +75,7 @@ img {
 
 
 /* Hero */
+
 main {
   display: flex;
   flex-direction: column;
@@ -107,6 +110,7 @@ main {
 
 
 /* Modal Form */
+
 form {
   display: block;
 }
@@ -329,6 +333,7 @@ form .btn-submit {
 
 
 /* Greetings for Registered Users */
+
 #modal-greetings{
   display: none;
   flex-direction: column;
@@ -371,6 +376,7 @@ form .btn-submit {
 
 
 /* Custom Select Styles */
+
 .custom-select {
   position: relative;
   font-family: Arial;
@@ -386,6 +392,7 @@ form .btn-submit {
 
 
 /* Style the Arrow Inside the Select Element: */
+
 .select-selected:after {
   position: absolute;
   content: "";
@@ -402,6 +409,7 @@ form .btn-submit {
 
 
 /* Point the Arrow Upward when the Select Box is Open (active): */
+
 .select-selected.select-arrow-active:after {
   transform: rotate(135deg);
   top: 13px;
@@ -419,6 +427,7 @@ form .btn-submit {
 
 
 /* Style Items (options): */
+
 .select-items {
   position: absolute;
   background-color: #fff;
@@ -430,6 +439,7 @@ form .btn-submit {
 
 
 /* Hide the Items when the Select Box is Closed: */
+
 .select-hide {
   display: none;
 }
@@ -440,6 +450,7 @@ form .btn-submit {
 
 
 /* Custom Select End */
+
 .text-label {
   font-weight: normal;
   font-size: 14px;
@@ -531,6 +542,7 @@ footer {
     opacity: 1;
   }
 }
+/* Add animation on close*/
 @keyframes modalclose {
   from {
     opacity: 1;

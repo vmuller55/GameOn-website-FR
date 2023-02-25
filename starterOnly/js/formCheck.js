@@ -1,11 +1,18 @@
 class CheckForm {
+    /**
+     * Regex constructor (use to verify input)
+     */
     constructor () {
         this.inputRegex = /^[a-zA-Z éèôâàîêëï-]{2,}$/;
         this.emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         this.birthdateRegex = /^(19[0-9][0-9]|20[01][0-9]|2020|2021|2022)[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/
         this.tournamentRegex = /^[0-9]{1,2}$/;
     }
-
+    /**
+     * Function wich change input style in case of error // create a div class error
+     * @param {*} input 
+     * @param {*} message 
+     */
     showErrorMessage (input,message) {
         let parent = input.parentNode;
         let divMessage = parent.querySelector(".error");
@@ -19,7 +26,10 @@ class CheckForm {
         divMessage.textContent = message;
         parent.appendChild(divMessage);
     }
-
+    /**
+     * Function wich change input style and remove div class error 
+     * @param {*} input 
+     */
     removeErrorMessage (input) {
         let parent = input.parentNode;
         let divMessage = parent.querySelector(".error");
@@ -28,9 +38,13 @@ class CheckForm {
             parent.removeChild(divMessage);
         }
     }
-
+    /**
+     * Function wich test input with regex
+     * @param {*} input 
+     * @returns false or true 
+     */
     checkTextInput (input) {
-        if (this.inputRegex.test(input.value) != true) {
+        if (this.inputRegex.test(input.value.trim()) != true) {
             this.showErrorMessage(input, "2 lettres minimum, pas de chiffres ou caractères spéciaux.");
             return false;
         }
@@ -39,7 +53,7 @@ class CheckForm {
     }
 
     checkEmailInput (input) {
-        if (this.emailRegex.test(input.value) != true) {
+        if (this.emailRegex.test(input.value.trim()) != true) {
             this.showErrorMessage(input, "Email invalide.");
             return false;
         }

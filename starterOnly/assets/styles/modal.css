@@ -172,13 +172,23 @@ label {
   display: inline-block;
   margin-bottom: 11px;
 }
-input {
+input{
   padding: 8px;
   border: 0.8px solid #ccc;
   outline: none;
+  
 }
+.errorBorder{
+  border: 2px outset #FF4E60;
+}
+.errorLocation{
+  border:  2px solid #FF4E60;
+  border-radius: 7px;
+  padding: 0 5px 10px 0;
+}
+
 .error {
-  color: red;
+  color: #FF4E60;
   font-size: 12px;
 }
 .text-control {
@@ -189,6 +199,7 @@ input {
   font-size: 20px;
   height: 48px;
 }
+
 .formData{
   margin: 14px 0;
 }
@@ -330,7 +341,6 @@ form .btn-submit {
   opacity: 0.3;
   cursor: not-allowed;
 }
-
 
 /* Greetings for Registered Users */
 

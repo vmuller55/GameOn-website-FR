@@ -17,14 +17,12 @@ class CheckForm {
         let parent = input.parentNode;
         let divMessage = parent.querySelector(".error");
         if (!divMessage) {
-            input.style.border = "outset";
-			input.style.borderColor = "red";
-			input.style.borderWidth = "3px";
+            input.classList.add("errorBorder");
             divMessage = document.createElement("div");
             divMessage.classList.add("error");
         }
         divMessage.textContent = message;
-        parent.appendChild(divMessage);
+        parent.appendChild(divMessage);       
     }
     /**
      * Function wich change input style and remove div class error 
@@ -34,7 +32,7 @@ class CheckForm {
         let parent = input.parentNode;
         let divMessage = parent.querySelector(".error");
         if (divMessage) {
-            input.style.borderColor = "transparent";
+            input.classList.remove("errorBorder");
             parent.removeChild(divMessage);
         }
     }

@@ -101,17 +101,12 @@ function checkLocationInput() {
 * If it's not valid => user alert
 */
 function locationIsNotValid () {
-	locationAlert.style.borderColor = "red";
-	locationAlert.style.borderWidth = "2px";
-	locationAlert.style.borderStyle = "solid";
-	locationAlert.style.borderRadius = "7px";
-	locationAlert.style.padding = "0 5px 10px 0";
+	locationAlert.classList.add("errorLocation")
 	document.getElementsByClassName("locationError")[0].style.display = "block";
 	document.getElementsByClassName("locationError")[0].textContent = "Veuillez choisir une ville.";
 }
 function locationIsValid () {
-	locationAlert.style.borderStyle = "none";
-	locationAlert.style.padding = "0";
+	locationAlert.classList.remove("errorLocation")
 	document.getElementsByClassName("locationError")[0].style.display = "none";
 }
 
